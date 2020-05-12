@@ -19,6 +19,7 @@ class Adherent
 
     public static function concatenateId(string $nom, string $prenom, DateTime $date_naissance)
     {
+
         return strtoupper((self::skip_accents($nom)).strtoupper(self::skip_accents($prenom)).$date_naissance->format('Y-m-d'));
     }
 
