@@ -22,4 +22,12 @@ class AdherentTest extends TestCase
         );
     }
 
+    public function testIsAccentSkipped(): void
+    {
+        $this->assertEquals(
+            'Helene',
+            Adherent::skip_accents('Hélène')
+        );
+    }
+
 }

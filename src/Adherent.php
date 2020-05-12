@@ -17,5 +17,10 @@ class Adherent
         $this->identifiant=concatenateId($nom,$prenom,$date_naissance);
     }
 
+    public static function concatenateId(string $nom, string $prenom, DateTime $date_naissance)
+    {
+        return strtoupper($nom).strtoupper($prenom).date(DATE_ATOM, $date_naissance);
+    }
+
 
 }
