@@ -14,5 +14,12 @@ class AdherentTest extends TestCase
         );
     }
 
+    public function testIsIdConcatenated(): void
+    {
+        $this->assertEquals(
+            'JEANDUPONT2000-01-01',
+            Adherent::concatenateId('Jean','Dupont',new DateTime('2000-01-01'))
+        );
+    }
 
 }
